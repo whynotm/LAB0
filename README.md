@@ -31,12 +31,13 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 
 ## Test docker's http
-[root@whynotmhost helloword]#  curl http://localhost:4000
+"[root@whynotmhost helloword]#  curl http://localhost:4000
+
 <h3>Hello World!</h3><b>Hostname:</b> 29cedfeb1f64<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>[root@whynotmhost helloword]#
-[root@whynotmhost helloword]#
+[root@whynotmhost helloword]#"
 
 
-==> localhot:4000 : 
+##==> localhot:4000 : 
 Hello World!
 Hostname: 29cedfeb1f64
 Visits: cannot connect to Redis, counter disabled
