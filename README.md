@@ -30,14 +30,17 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 [root@whynotmhost helloword]#
 
 
-## Test docker's http
+## Test docker's http CURL
 "[root@whynotmhost helloword]#  curl http://localhost:4000
 
 <h3>Hello World!</h3><b>Hostname:</b> 29cedfeb1f64<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>[root@whynotmhost helloword]#
 [root@whynotmhost helloword]#"
 
 
-##==> localhot:4000 : 
+## Test docker's http CURL
+
+Browser : tape  localhot:4000 : 
+
 Hello World!
 Hostname: 29cedfeb1f64
 Visits: cannot connect to Redis, counter disabled
