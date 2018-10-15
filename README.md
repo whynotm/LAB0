@@ -46,6 +46,27 @@ Hostname: 29cedfeb1f64
 Visits: cannot connect to Redis, counter disabled
 
 
+##Docker STOP LIST RM LIST
+
+[root@whynotmhost helloword]# docker container ls --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
+29cedfeb1f64        friendlyhello       "python app.py"     5 minutes ago       Up 5 minutes        0.0.0.0:4000->80/tcp   festive_snyder
+
+
+[root@whynotmhost helloword]# docker stop 29cedfeb1f64
+29cedfeb1f64
+
+[root@whynotmhost helloword]# docker container ls --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                       PORTS               NAMES
+29cedfeb1f64        friendlyhello       "python app.py"     6 minutes ago       Exited (137) 2 seconds ago                       festive_snyder
+
+[root@whynotmhost helloword]# docker container rm 29cedfeb1f64
+29cedfeb1f64
+
+[root@whynotmhost helloword]# docker container ls --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@whynotmhost helloword]#
+
 
 
 
