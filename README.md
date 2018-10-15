@@ -1,2 +1,51 @@
 # LAB0
 LAB0 First Project on GIT
+
+
+
+# DOCKER
+##List Docker Images
+
+[root@whynotmhost helloword]# docker image ls
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+whynotm/get-started   part2               a6ad9d65bcb0        29 minutes ago      132MB
+friendlyhello         latest              a6ad9d65bcb0        29 minutes ago      132MB
+python                2.7-slim            14dad3ead5f4        5 days ago          120MB
+hello-world           latest              4ab4c602aa5e        5 weeks ago         1.84kB
+[root@whynotmhost helloword]#
+
+## List Conatiners runnung
+docker container ls --all
+
+## RUn Docker
+[root@whynotmhost helloword]# docker run -d -p 4000:80 friendlyhello
+29cedfeb1f64ee23425a9cdc4121eba44adaad34e44fb386cd7f3e34b800ecd5
+[root@whynotmhost helloword]#
+
+
+## Helloword dockers Running
+root@whynotmhost helloword]# docker container ls --all
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                  NAMES
+29cedfeb1f64        friendlyhello       "python app.py"     18 seconds ago      Up 18 seconds       0.0.0.0:4000->80/tcp   festive_snyder
+[root@whynotmhost helloword]#
+
+
+## Test docker's http
+[root@whynotmhost helloword]#  curl http://localhost:4000
+<h3>Hello World!</h3><b>Hostname:</b> 29cedfeb1f64<br/><b>Visits:</b> <i>cannot connect to Redis, counter disabled</i>[root@whynotmhost helloword]#
+[root@whynotmhost helloword]#
+
+
+==> localhot:4000 : 
+Hello World!
+Hostname: 29cedfeb1f64
+Visits: cannot connect to Redis, counter disabled
+
+
+
+
+
+
+
+
+
