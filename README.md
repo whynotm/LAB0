@@ -108,3 +108,39 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 
 [root@whynotmhost helloword]#
 
+
+
+
+
+
+
+
+## DOCKER ENGINE SERVICE
+
+
+
+    [root@whynotmhost helloword]# service docker start  
+    Redirecting to /bin/systemctl start docker.service
+    [root@whynotmhost helloword]#
+    [root@whynotmhost helloword]#  systemctl status docker -l
+● docker.service - Docker Application Container Engine
+        Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+       Active: active (running) since Tue 2018-10-16 15:08:30 WEST; 2s ago
+     Docs: https://docs.docker.com
+ Main PID: 55249 (dockerd)
+   Memory: 44.8M
+   CGroup: /system.slice/docker.service
+           ├─55249 /usr/bin/dockerd
+           └─55255 docker-containerd --config /var/run/docker/containerd/containerd.toml
+
+Oct 16 15:08:29 whynotmhost dockerd[55249]: time="2018-10-16T15:08:29.285580644+01:00" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc42030c260, CONNECTING" module=grpc
+Oct 16 15:08:29 whynotmhost dockerd[55249]: time="2018-10-16T15:08:29.285777191+01:00" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc42030c260, READY" module=grpc
+Oct 16 15:08:29 whynotmhost dockerd[55249]: time="2018-10-16T15:08:29.285796369+01:00" level=info msg="Loading containers: start."
+Oct 16 15:08:29 whynotmhost dockerd[55249]: time="2018-10-16T15:08:29.833812266+01:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.008090408+01:00" level=info msg="Loading containers: done."
+Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.018846899+01:00" level=info msg="Docker daemon" commit=e68fc7a graphdriver(s)=overlay2 version=18.06.1-ce
+Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.018912724+01:00" level=info msg="Daemon has completed initialization"
+Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.020262801+01:00" level=warning msg="Could not register builder git source: failed to find git binary: exec: \"git\": executable file not found in $PATH"
+Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.033200063+01:00" level=info msg="API listen on /var/run/docker.sock"
+Oct 16 15:08:30 whynotmhost systemd[1]: Started Docker Application Container Engine.
+[root@whynotmhost helloword]#
