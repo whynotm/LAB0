@@ -144,3 +144,22 @@ Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.020262801+
 Oct 16 15:08:30 whynotmhost dockerd[55249]: time="2018-10-16T15:08:30.033200063+01:00" level=info msg="API listen on /var/run/docker.sock"
 Oct 16 15:08:30 whynotmhost systemd[1]: Started Docker Application Container Engine.
 [root@whynotmhost helloword]#
+
+
+
+## GIT PUSH
+
+git init .
+
+git add $DIRECTO_TO_PUSH
+
+
+ git status
+git commit -m "Ajout fichier de configuration de gitlab et gitignore"
+
+
+
+git remote add origin http://whynotm@172.21.0.2/config/whynotm.git
+
+
+git push origin master
