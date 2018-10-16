@@ -83,4 +83,6 @@ docker-compose version 1.22.0, build f46880fe
 
 
 
+## Docker service status
+service docker status
 
