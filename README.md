@@ -94,13 +94,13 @@ docker volume inspect volumeid
 
 ## SWORM MODE
 
-docker swarm init --advertise-addr $(hostname -i)
+   docker swarm init --advertise-addr $(hostname -i)
 
 
 root@whynotmhost helloword]# docker swarm init --advertise-addr $(hostname -i)
-Swarm initialized: current node (d9i88ihkk112lyuuu45teox0l) is now a manager.
+    Swarm initialized: current node (d9i88ihkk112lyuuu45teox0l) is now a manager.
 
-To add a worker to this swarm, run the following command:
+    To add a worker to this swarm, run the following command:
 
     docker swarm join --token SWMTKN-1-631oe1x6i6s5fqkf04o2tsyknq0kr6amfq5mwdcnpflst0cj5p-1izjtci1jw6p3ved42x0hv8l9 127.0.0.1:2377
 
